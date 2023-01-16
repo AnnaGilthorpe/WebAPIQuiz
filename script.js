@@ -1,23 +1,39 @@
 let choicesEl = document.querySelector("#choices");
+let startScreen = document.querySelector("#start-screen");
 let startBtn = document.querySelector("#start");
-let questions = [{question: "This is question 1", answers: ["orange", "yellow", "green, "blue"], correctAnswer: 1}
+let questionEl = document.querySelector("#questions");
+let questionTitle = document.querySelector("#question-title");
+let choices = document.querySelector("#choices");
+let questions = [
+    {
+        question: "This is question 1", 
+        answers: ["orange", "yellow", "green", "blue"],
+        correctAnswer: 1
+    
+    }, {
+        question: "This is question 2",
+        answers: ["cat", "dog", "mouse", "rabbit"],
+        correctAnswer: 2
+    } 
+
+];
 
 // Click to start #start on startBtn
-document.querySelector("#question-title".textContent = questions[0].question);
+//document.querySelector("#question-title".textContent = questions[0].question);
 
 
 // Questions. Array of objects. Index tracker to track what questions you are on.
 // If they choose incorrect answer increment currentQuestion by 1
 // Soon as you change the index going to want to rerender the q text and all the answers
-{question: "This is question 2", answers: ["cat", "dog", "mouse", "rabbit"], correctAnswer: 2}
+// {question: "This is question 2", answers: ["cat", "dog", "mouse", "rabbit"], correctAnswer: 2}
 
-{question: "This is question 3", answers: ["mel b", "mel c", "geri", "emma" ], correctAnswer: 3}
+// {question: "This is question 3", answers: ["mel b", "mel c", "geri", "emma" ], correctAnswer: 3}
 
-{question: "This is question 4", answers: ["apple", "orange", "banana", "kiwi"], correctAnswer: 4}
+// {question: "This is question 4", answers: ["apple", "orange", "banana", "kiwi"], correctAnswer: 4}
 
-{question: "This is question 5", answers: ["yoyo", "lego", "slime", "t-rex"], correctAnswer: 5}
+// {question: "This is question 5", answers: ["yoyo", "lego", "slime", "t-rex"], correctAnswer: 5}
 
-let currentQuestion = 0;
+// let currentQuestion = 0;
 
 //Choices. Generate a button for each item div that has a button in each one.
 // Display text on button or next to the button eg string inside the button
@@ -35,20 +51,27 @@ let currentQuestion = 0;
 
 //Timer listen for start click. When incorrect anwer subtract from timer
 
-startBtn.onclick = function ()
-startBtn.addEventListener("click", function (event)) {
-    if()
-}
-choicesEl.addEventListener("click", function(event){
-    if(event.target.matches("button")){
-event.target.getAttribute("data-index")
-    }
+startBtn.addEventListener("click", function (event) {
+    startScreen.classList.add("hide");
+    console.log("test");
+    questionEl.classList.remove("hide");
+    questionTitle.textContent = questions[0].question;
+let answerButton = document.createElement("button");
+answerButton.textContent = questions[0].answers[0];
+choices.append(answerButton);
+
 })
-//Question text
-let questionText = document.querySelector("question-title");
 
-let answersBtns = ["ex1, "ex2", "ex3", "ex4"];
+// //choicesEl.addEventListener("click", function(event){
+//     if(event.target.matches("button")){
+// event.target.getAttribute("data-index")
+//     }
+// })
+// //Question text
+// let questionText = document.querySelector("question-title");
 
-function generateQuiz (questions)
+// let answersBtns = ["ex1, "ex2", "ex3", "ex4"];
 
-//compare answer selected with correctAnswer. If answer is wrong we detract from timer
+// function generateQuiz (questions)
+
+// //compare answer selected with correctAnswer. If answer is wrong we detract from timer
