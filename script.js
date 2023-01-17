@@ -58,6 +58,7 @@ let questions = [
 //High score. Separate HTML
 
 //Timer listen for start click. When incorrect anwer subtract from timer
+let countDown = 
 
 startBtn.addEventListener("click", function (event) {
     startScreen.classList.add("hide");
@@ -66,7 +67,6 @@ startBtn.addEventListener("click", function (event) {
 let answerButton = document.createElement("button");
 answerButton.textContent = questions[0].answers[0];
 choices.append(answerButton);
-
 let answerButton2 = document.createElement("button");
 answerButton2.textContent = questions[0].answers[1];
 choices.append(answerButton2);
@@ -76,11 +76,43 @@ choices.append(answerButton3);
 let answerButton4 = document.createElement("button");
 answerButton4.textContent = questions[0].answers[3];
 choices.append(answerButton4);
-if correctAnswer === 1 {questionTitle.textContent = questions[1].question;
+
+
+//make a if statement to check if the answer is correct or not
+let correctAnswerButton = answerButton;
+if (correctAnswerButton === answerButton) {
+    questionTitle.textContent = questions[1].question;
  };
 
-answerButton.addEventListener("click", function (event){
-    questionTitle.textContent = questions[1].question;})
+
+// // make a if statement to check if the answer is correct or not
+// // if the answer is correct then move to the next question
+// // if the answer is incorrect then subtract 10 seconds from the timer
+// // if the answer is incorrect then move to the next question
+// // if the answer is correct then move to the next question
+// choicesEl.addEventListener("click", function(event){
+//     //check if the user clicked on a button
+//     if(event.target.matches("button")){
+//         //get the index of the button
+//         let index = event.target.getAttribute("data-index");
+//         //check if the index is the correct answer
+//         if(){
+//             //correct answer
+        
+//             //check if we are at the end of the questions array
+//             if(){
+//                 //game over
+//             } else {
+//                 //render next question 
+//             }
+//         } else {
+//             //wrong answer
+//         }
+//     }
+// })
+
+// answerButton.addEventListener("click", function (event){
+//     questionTitle.textContent = questions[1].question;})
 
 // //choicesEl.addEventListener("click", function(event){
 //     if(event.target.matches("button")){
