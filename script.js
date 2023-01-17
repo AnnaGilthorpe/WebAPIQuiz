@@ -14,6 +14,14 @@ let questions = [
         question: "This is question 2",
         answers: ["cat", "dog", "mouse", "rabbit"],
         correctAnswer: 2
+    } , {
+        question: "This is question 3",
+        answers: ["apple", "orange", "banana", "kiwi"],
+        correctAnswer: 3
+    } , {
+        question: "This is question 4",
+        answers: ["yoyo", "lego", "slime", "t-rex"],
+        correctAnswer: 3
     } 
 
 ];
@@ -53,14 +61,26 @@ let questions = [
 
 startBtn.addEventListener("click", function (event) {
     startScreen.classList.add("hide");
-    console.log("test");
     questionEl.classList.remove("hide");
     questionTitle.textContent = questions[0].question;
 let answerButton = document.createElement("button");
 answerButton.textContent = questions[0].answers[0];
 choices.append(answerButton);
 
-})
+let answerButton2 = document.createElement("button");
+answerButton2.textContent = questions[0].answers[1];
+choices.append(answerButton2);
+let answerButton3 = document.createElement("button");
+answerButton3.textContent = questions[0].answers[2];
+choices.append(answerButton3);
+let answerButton4 = document.createElement("button");
+answerButton4.textContent = questions[0].answers[3];
+choices.append(answerButton4);
+if correctAnswer === 1 {questionTitle.textContent = questions[1].question;
+ };
+
+answerButton.addEventListener("click", function (event){
+    questionTitle.textContent = questions[1].question;})
 
 // //choicesEl.addEventListener("click", function(event){
 //     if(event.target.matches("button")){
