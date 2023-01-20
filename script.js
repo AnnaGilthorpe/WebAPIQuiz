@@ -80,26 +80,45 @@ choices.append(answerButton4);
 
 
 //make a if statement to check if the answer is correct or not
-let correctAnswerButton = answerButton;
-if (correctAnswerButton === answerButton) {
-    answerButton.addEventListener("click", function (event) {
-    questionTitle.textContent = questions[1].question;
-    let answerButton = document.createElement("button");
+// let correctAnswerButton = answerButton;
+// if (correctAnswerButton === answerButton) {
+//     answerButton.addEventListener("click", function (event) {
+//     questionTitle.textContent = questions[1].question;
+//     let answerButton = document.createElement("button");
+
+// answerButton.textContent = questions[1].answers[0];
+// choices.append(answerButton);
+// let answerButton2 = document.createElement("button");
+// answerButton2.textContent = questions[1].answers[1];
+// choices.append(answerButton2);
+// let answerButton3 = document.createElement("button");
+// answerButton3.textContent = questions[1].answers[2];
+// choices.append(answerButton3);
+// let answerButton4 = document.createElement("button");
+// answerButton4.textContent = questions[1].answers[3];
+// choices.append(answerButton4);
+//     console.log(answerButton);});
+//     choices.setclass("hide");
     
-answerButton.textContent = questions[1].answers[0];
-choices.append(answerButton);
-let answerButton2 = document.createElement("button");
-answerButton2.textContent = questions[1].answers[1];
-choices.append(answerButton2);
-let answerButton3 = document.createElement("button");
-answerButton3.textContent = questions[1].answers[2];
-choices.append(answerButton3);
-let answerButton4 = document.createElement("button");
-answerButton4.textContent = questions[1].answers[3];
-choices.append(answerButton4);
-    console.log(answerButton);});
+    // } else (correctAnswerButton !== answerButton) {
+    // answerButton.addEventListener("click", function (event) {
+    //     questionTitle.textContent = questions[1].question;
+    //     let answerButton = document.createElement("button");
     
- };
+    // answerButton.textContent = questions[1].answers[0];
+    // choices.append(answerButton);
+    // let answerButton2 = document.createElement("button");
+    // answerButton2.textContent = questions[1].answers[1];
+    // choices.append(answerButton2);
+    // let answerButton3 = document.createElement("button");
+    // answerButton3.textContent = questions[1].answers[2];
+    // choices.append(answerButton3);
+    // let answerButton4 = document.createElement("button");
+    // answerButton4.textContent = questions[1].answers[3];
+    // choices.append(answerButton4);
+    //     console.log(answerButton);}); 
+  
+
 
 
  // make a if statement to check if the answer is correct or not
@@ -126,7 +145,7 @@ choices.append(answerButton4);
 //             //wrong answer
 //         }
 //     }
-})
+
 
 // // make a if statement to check if the answer is correct or not
 // // if the answer is correct then move to the next question
